@@ -3,11 +3,6 @@ mod utils;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-extern "C" {
-  fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet() -> String {
-  String::from("Greet from wasm!")
+pub fn greet(msg: String) -> String {
+  msg
 }
